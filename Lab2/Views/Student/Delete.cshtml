@@ -1,0 +1,17 @@
+﻿@model Student
+@{
+    Layout = "_layout2";
+    ViewBag.title = "Delete Student";
+}
+
+
+    <br />
+    <div class="alert alert-danger">
+        Are You Sure To delete @Model.Name
+    </div>
+    <br />
+    <form method="post">
+        <input type="text" value="@Model.Id" name="Id" hidden />
+        <input type="submit" value="Delete" class="btn btn-danger"/>
+    </form>
+

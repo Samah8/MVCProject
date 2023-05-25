@@ -1,0 +1,19 @@
+﻿
+@model Student      // strongly typed
+@{
+   Layout = "_layout2";
+    ViewBag.title = "Edit Student";
+}
+
+
+    <br />
+    <form method="post">
+        <p style="color:yellowgreen">Update Student</p>
+        <partial name="CreateUpdate" />
+        <input type="submit" value="Update" style="background-color:yellowgreen;border:none" class="p-6 m-6" />
+    </form>
+@section scripts
+    {
+    <partial name="_ValidationScriptsPartial"></partial>
+    }
+

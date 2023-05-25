@@ -1,0 +1,16 @@
+﻿
+@model Student
+@{
+    Layout = "_layout2";
+    ViewBag.title = " Student Details";
+}
+
+
+    <br />
+    <h4 class="alert-primary m-3 p-3">
+        @Model.Id : @Model.Name : @Model.DeptID
+    </h4>
+    Student Image: <img src="/images/@Model.imgName" />
+    <br />
+    <a  asp-controller="student" asp-action="index" class="btn btn-secondary m-3">Back</a>
+

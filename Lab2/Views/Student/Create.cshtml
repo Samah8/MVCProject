@@ -1,0 +1,29 @@
+﻿@model Student
+@{
+    Layout = "_layout2";
+    ViewBag.title= "Create Student";
+}
+
+
+    <br />
+    <form action="/student/create" method="post" enctype="multipart/form-data">
+      ID:    <input asp-for="@Model.Id" /> <span asp-validation-for="Id"></span>
+      Name:    <input asp-for="@Model.Name" /> <span asp-validation-for="Name"></span>
+    Department: <input asp-for="@Model.DeptID" />  <span asp-validation-for="DeptID"></span>
+      @*<select asp-for="@Model.DeptID" >
+           @foreach(var item in ViewBag.depts)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select> *@
+      Password:    <input asp-for="@Model.Password" /> <span asp-validation-for="Password"></span>
+      Confirm Password:    <input type="password" asp-for="@Model.CPassword" /> <span asp-validation-for="CPassword"></span><br />
+    Image:    <input type="file" name="imgStd" /> 
+
+        <br /><br />
+        <input type="submit" value="Add Student "  style="background-color:lightblue"/>
+    </form>
+@section scripts
+    {
+    <partial name="_ValidationScriptsPartial"></partial>
+    }

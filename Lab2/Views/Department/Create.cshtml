@@ -1,0 +1,18 @@
+﻿@model Department
+@{
+    Layout = "_layout2";
+    ViewBag.title= "Create Department";
+}
+
+
+    <br />
+    <form action="/department/create" method="post">
+         ID:    <input asp-for="Id" /> <span asp-validation-for="Id"></span>
+        <partial name="CreateUpdate" />
+         <input type="submit" value="Add Department" />
+    </form>
+
+    @section scripts
+    {
+    <partial name="_ValidationScriptsPartial"></partial>
+    }
